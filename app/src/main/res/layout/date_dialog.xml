@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp"
+    android:orientation="vertical">
+     <EditText
+         android:id="@+id/startDate"
+         android:layout_width="250dp"
+         android:layout_height="48dp"
+         android:padding="10dp"
+         android:hint="From"
+         android:drawablePadding="6dp"
+         android:outlineAmbientShadowColor="@color/bgcolor"
+         android:drawableStart="@drawable/baseline_calendar_month_24"/>
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/endDate"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:padding="10dp"
+        android:outlineAmbientShadowColor="@color/bgcolor"
+        android:hint="To"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/baseline_calendar_month_24"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="10dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/bgcolor"
+        android:layout_gravity="center_horizontal"
+        />
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsageFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#448AFF"
+            app:title="Data usage stats"
+            app:titleTextColor="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/usageCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintStart_toStartOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/usageCardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="6dp"
+                android:text="Today"/>
+            <TextView
+                android:id="@+id/cardUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usage"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/usageCardText"
+                android:padding="6dp"/>
+            <ImageView
+                android:id="@+id/calenderLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="6dp"
+                android:src="@drawable/baseline_calendar_month_24"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <ProgressBar
+        android:id="@+id/pgBar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usageCard" />
+
+    <TextView
+        android:id="@+id/pgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fetching details"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/pgBar"
+        app:layout_constraintBottom_toBottomOf="@+id/pgBar"
+        app:layout_constraintStart_toEndOf="@+id/pgBar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/usageCard"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
