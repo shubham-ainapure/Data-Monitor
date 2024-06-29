@@ -1,4 +1,5 @@
 # Data-Monitor
 
 Home fragment
-![monitor home fragment](https://github.com/shubham-ainapure/Data-Monitor/assets/56270447/2e24ad08-f6ae-4d2d-84b3-9fbbc29f715f)
+
+![monitor home fragment1](https://github.com/shubham-ainapure/Data-Monitor/assets/56270447/306a7be7-b978-470b-b11c-c88527181012)
